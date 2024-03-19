@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 30px;
     height: 100vh;
     background-color: black;
 }
@@ -240,6 +241,10 @@ video {
     display: none;
 }
 
+.box7 {
+    display:contents;
+}
+
 /*TEXT*/
 p {
     margin: 0;
@@ -339,6 +344,16 @@ h4:hover {
         display: none;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+        height: 100vh;
+        background-color: black;
+    }
+
     .container1 {
         position: fixed;
         display: inline-grid;
@@ -352,6 +367,16 @@ h4:hover {
         padding: 5px;
         padding-bottom: 30px;
         z-index: 10;
+    }
+
+    .container2 {
+        position: relative;
+        display: inline-grid;
+        grid: auto / 25% 25% 50%;
+        grid-column-gap: 5px;
+        grid-row-gap: 3px;
+        width: calc(100% - 20px);
+        padding-bottom: 30px;
     }
 
     h2 {
@@ -401,6 +426,11 @@ h4:hover {
         text-decoration: underline;
         font-weight: 500;
     }
+
+    .box7 {
+        display:none;
+    }
+    
     
     .container_carouselle>img {
         display: flex;
