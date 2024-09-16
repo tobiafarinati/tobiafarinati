@@ -70,7 +70,7 @@ a {
     position: absolute;
     display: flex;
     flex-direction: column;
-    z-index: 20;
+    z-index: 25;
 }
 
 .box {
@@ -79,6 +79,7 @@ a {
     margin-top: 4px;
     padding: 3px;
     background-color: black;
+    z-index: 25;
 }
 
 .footer {
@@ -93,6 +94,7 @@ a {
     flex-direction: column;
     justify-content: center;
     height: calc(100vh - 16px);
+    height: calc(100svh - 16px);
     width: auto;
 }
 
@@ -134,6 +136,11 @@ video {
     visibility: visible;
 }
 
+.box1{
+    background-color: none;
+    display: block;
+}
+
 /* Medium (tablet, 768px and down) */
 @media only screen and (max-width: 900px) {
     .box {
@@ -146,12 +153,22 @@ video {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 450px) {
     .box {
         position: relative;
         width: calc(100% - 8px);
         margin-top: 4px;
         padding: 3px;
         background-color: black;
+    }
+
+    .box1{
+        background-color: none;
+        display: none;
+    }
+
+    .container1:hover {
+        background-color: none;
+        z-index: 20;
     }
 }
