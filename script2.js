@@ -23,6 +23,19 @@ $('.item').mousemove(function (e) {
     $(this).find('img').removeClass('visible');
 });
 
+//image-rotation
+//$(document).ready(function () {
+  // Seleziona tutte le immagini all'interno degli elementi `.item`
+ // $('.item > img').each(function () {
+      // Genera una rotazione casuale tra -10 e 10 gradi
+   //   var randomRotation = Math.floor(Math.random() * 21) - 10;
+      // Applica la rotazione all'immagine
+   ////       transform: 'rotate(' + randomRotation + 'deg)'
+ //     });
+ // });
+//});
+
+
 //SafeArea Iphone
 const setVh = () => {
   let vh = window.innerHeight * 0.01;
