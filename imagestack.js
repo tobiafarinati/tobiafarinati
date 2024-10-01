@@ -41,3 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+//centra immagine verticalmente
+window.onload = function() {
+    const container = document.querySelector('.image-stack-container');
+    const image = document.querySelector('.image-stack-item');
+    
+    function adjustTop() {
+        const imageHeight = image.offsetHeight;
+        const topValue = `calc(50% - ${imageHeight / 2}px)`;
+        container.style.top = topValue;
+    }
+    
+    // Esegui la regolazione all'avvio e ogni volta che la finestra viene ridimensionata
+    adjustTop();
+    window.addEventListener('resize', adjustTop);
+};
