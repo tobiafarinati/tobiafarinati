@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Ruota casualmente le immagini
           Array.from(images).forEach(function(item) {
-              item.style.transform = 'rotate(' + Math.floor(Math.random() * (10 - (-10) + 1) + (-10)) + 'deg)';
+              item.style.transform = 'rotate(' + Math.floor(Math.random() * (8 - (-8) + 1) + (-8)) + 'deg)';
               item.style.transitionTimingFunction = 'ease-in';
               item.style.transitionDuration = '500ms';
           });
@@ -51,9 +51,9 @@ window.onload = function() {
         const imageHeight = image.offsetHeight;
         const topValue = `calc(50% - ${imageHeight / 2}px)`;
         container.style.top = topValue;
+        container.style.visibility = 'visible'; // Show the image after positioning
     }
     
-    // Esegui la regolazione all'avvio e ogni volta che la finestra viene ridimensionata
     adjustTop();
     window.addEventListener('resize', adjustTop);
 };

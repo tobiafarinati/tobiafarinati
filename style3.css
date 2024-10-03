@@ -2,7 +2,7 @@ html,
 body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
-    background-color: #dadada;
+    /*background-color: #dadada;*/
 }
 
 
@@ -48,6 +48,11 @@ a {
     z-index: 20;
 }
 
+.header>a:hover {
+    text-decoration: underline;
+}
+
+
 .footer {
     position: absolute;
     bottom: 8px;
@@ -88,6 +93,8 @@ a {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    visibility: hidden;
+    max-height: 80svh;
 }
 
 .image-stack-item {
@@ -97,6 +104,7 @@ a {
     height: auto;
     object-fit: contain;
     object-position: center;
+    max-height: 80svh;
 }
 
 .image-stack-container:hover {
@@ -104,9 +112,12 @@ a {
     transform: scale(1.03);
     transition-timing-function: ease-in;
     transition-duration: 500ms;
-    -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 /*CAROUSELLE*/
@@ -119,7 +130,7 @@ a {
     margin-top: 10px;
 }
 
-.container_carouselle > img {
+.container_carouselle>img {
     display: inline-block;
     height: 100%;
     width: auto;
@@ -128,9 +139,7 @@ a {
 
 
 /* Medium (tablet, 768px and down) */
-@media only screen and (max-width: 900px) {
-
-}
+@media only screen and (max-width: 900px) {}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -144,7 +153,7 @@ a {
         width: 100%;
     }
 
-    .container_carouselle > img {
+    .container_carouselle>img {
         display: inline-block;
         height: auto;
         width: 100%;
@@ -155,9 +164,10 @@ a {
         margin-top: 0;
         padding-bottom: 5px;
         width: 100%;
-        border-bottom: 0.8px solid black;    }
+        border-bottom: 0.8px solid black;
+    }
 
-    .item2{
+    .item2 {
         margin-top: 10px;
         width: 100%;
         border-bottom: none;

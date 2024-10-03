@@ -34,6 +34,15 @@ a {
     color: black;
 }
 
+.header>a:hover {
+    text-decoration: underline;
+}
+
+.header>p:hover {
+    text-decoration: underline;
+}
+
+
 .container1 {
     width: fit-content;
     display: inline-grid;
@@ -48,12 +57,7 @@ a {
 }
 
 .container1:hover {
-    background-color: black;
-    z-index: 20;
-}
-
-.container1:hover > p {
-    color: #dadada;
+    text-decoration: underline;
     z-index: 20;
 }
 
@@ -137,7 +141,7 @@ video {
     visibility: visible;
 }
 
-.box1{
+.box1 {
     background-color: none;
     display: block;
 }
@@ -163,7 +167,7 @@ video {
         background-color: black;
     }
 
-    .box1{
+    .box1 {
         background-color: none;
         display: none;
     }
