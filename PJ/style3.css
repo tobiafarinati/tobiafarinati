@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100svh;
-    height: 100vh;
+    height: 100%;
     -webkit-font-smoothing: antialiased;
     /*background-color: #dadada;*/
     overflow-y: auto;
@@ -67,6 +67,7 @@ a {
 .all-container {
     margin: 8px;
     height: 100svh;
+    height: auto;
 }
 
 .container1 {
