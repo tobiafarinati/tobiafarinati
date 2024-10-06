@@ -60,10 +60,10 @@ window.onload = function() {
  */
 
 
-// calcola altezza immagini e la riferisce a image-stack-container
 function adjustContainerHeight() {
     const container = document.querySelector('.image-stack-container');
     const items = document.querySelectorAll('.image-stack-item');
+    const comment = document.querySelector('.comment');
 
     let maxHeight = 0;
 
@@ -76,6 +76,10 @@ function adjustContainerHeight() {
 
     // Set the container's height to the max height of the images
     container.style.height = `${maxHeight}px`;
+
+    // Make the container and comment visible after calculation
+    container.style.visibility = 'visible';
+    comment.style.visibility = 'visible';
 }
 
 // Call adjustContainerHeight when the window loads
@@ -83,4 +87,3 @@ window.addEventListener('load', adjustContainerHeight);
 
 // Call adjustContainerHeight whenever the window is resized
 window.addEventListener('resize', adjustContainerHeight);
-
