@@ -67,6 +67,7 @@ a {
 .all-container {
     margin: 8px;
     height: 100svh;
+    height: 100vh;
     height: auto;
 }
 
