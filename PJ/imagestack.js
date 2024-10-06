@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//centra immagine verticalmente
+/* //centra immagine verticalmente
 window.onload = function() {
     const container = document.querySelector('.image-stack-container');
     const image = document.querySelector('.image-stack-item');
@@ -57,3 +57,30 @@ window.onload = function() {
     adjustTop();
     window.addEventListener('resize', adjustTop);
 };
+ */
+
+
+// calcola altezza immagini e la riferisce a image-stack-container
+function adjustContainerHeight() {
+    const container = document.querySelector('.image-stack-container');
+    const items = document.querySelectorAll('.image-stack-item');
+
+    let maxHeight = 0;
+
+    // Iterate through all image stack items to find the max height
+    items.forEach(item => {
+        if (item.offsetHeight > maxHeight) {
+            maxHeight = item.offsetHeight; // Update maxHeight if current item's height is greater
+        }
+    });
+
+    // Set the container's height to the max height of the images
+    container.style.height = `${maxHeight}px`;
+}
+
+// Call adjustContainerHeight when the window loads
+window.addEventListener('load', adjustContainerHeight);
+
+// Call adjustContainerHeight whenever the window is resized
+window.addEventListener('resize', adjustContainerHeight);
+
