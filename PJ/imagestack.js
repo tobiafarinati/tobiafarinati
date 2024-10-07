@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
         container.style.top = topValue;
         container.style.visibility = 'visible'; // Show the image after positioning
     }
+
+    adjustTop();
+    window.addEventListener('load', adjustTop);
     
     adjustTop();
     window.addEventListener('resize', adjustTop);
