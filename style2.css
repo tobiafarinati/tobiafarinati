@@ -93,6 +93,43 @@ a {
     z-index: 20;
 }
 
+/*MODAL WINDOW*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 29; /* Sit on top */
+    padding-top: 130px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    z-index: 30;
+    background-color: white;
+    margin: auto;
+    padding: 16px;
+    border: 1px solid black;
+    width: 78%;
+    max-height: 70vh;
+    max-height: 70svh;
+    overflow: auto;
+  }
+  
+  /* The Close Button */  
+.close {
+    width: fit-content;
+}
+
+  .close:hover,
+  .close:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
 /*image hover*/
 .container {
     display: flex;

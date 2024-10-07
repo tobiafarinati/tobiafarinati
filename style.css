@@ -40,6 +40,13 @@ a {
     background: rgba(0, 0, 0, 0);
 }
 
+#myBtn{
+    z-index: 20;
+    mix-blend-mode: difference;
+    will-change: mix-blend-mode;
+    background: rgba(0, 0, 0, 0);
+}
+
 .header {
     position: absolute;
     display: flex;
@@ -47,11 +54,19 @@ a {
 
 }
 
+header > a p {
+    color: #dadada;
+}
+
 .header>a:hover {
     text-decoration: underline;
 }
 
 .header>p:hover {
+    text-decoration: underline;
+}
+
+.modal-content > p > a:hove{
     text-decoration: underline;
 }
 
@@ -131,6 +146,43 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+/*MODAL WINDOW*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 29; /* Sit on top */
+    padding-top: 130px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    z-index: 30;
+    background-color: white;
+    margin: auto;
+    padding: 16px;
+    border: 1px solid black;
+    width: 78%;
+    max-height: 70vh;
+    max-height: 70svh;
+    overflow: auto;
+  }
+  
+  /* The Close Button */  
+.close {
+    width: fit-content;
+}
+
+  .close:hover,
+  .close:focus {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
 .box {
     position: relative;

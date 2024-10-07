@@ -108,7 +108,7 @@ a {
 
 .image-stack-item {
     z-index: -1;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -134,23 +134,25 @@ a {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    z-index: 29; /* Sit on top */
+    padding-top: 130px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
   }
   
   /* Modal Content */
   .modal-content {
-    z-index: 2;
-    background-color: #fefefe;
+    z-index: 30;
+    background-color: white;
     margin: auto;
-    padding: 20px;
+    padding: 16px;
     border: 1px solid black;
-    width: 80%;
+    width: 78%;
+    max-height: 70vh;
+    max-height: 70svh;
+    overflow: auto;
   }
   
   /* The Close Button */  
