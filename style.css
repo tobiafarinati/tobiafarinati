@@ -161,7 +161,7 @@ img {
   }
   
   /* Modal Content */
-  .modal-content {
+.modal-content {
     z-index: 30;
     background-color: white;
     margin: auto;
@@ -171,8 +171,10 @@ img {
     max-height: 70vh;
     max-height: 70svh;
     overflow: auto;
-  }
-  
+    transition-timing-function: ease-in;
+    transition-duration: 250ms;
+}
+
   /* The Close Button */  
 .close {
     width: fit-content;
@@ -213,5 +215,14 @@ img {
         margin-top: 4px;
         padding: 3px;
         background-color: black;
+    }
+}
+
+/* Effetto hover per i dispositivi che supportano hover */
+@media (hover: hover) and (pointer: fine) {
+    .modal-content:hover {
+        transform: scale(1.02);
+        transition-timing-function: ease-in;
+        transition-duration: 250ms;
     }
 }
