@@ -1,6 +1,6 @@
 @font-face {
     font-family: "MinionPro";
-    src: url('/font/MinionPro-Regular.woff');
+    src: url('/font/MinionPro-Regular.woff') format('woff');
 }
 
 
