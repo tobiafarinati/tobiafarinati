@@ -101,7 +101,7 @@ a {
     width: auto;
     display: block;
     word-wrap: break-word;
-    max-width: 100%;
+    max-width: calc(100vw - 16px);
     width: 100%;
     -webkit-nbsp-mode: normal;
     --font-scale: 1;
@@ -117,11 +117,12 @@ a {
 }
 
 .item:hover {
-    z-index: 10;
+    z-index: 1;
     cursor: pointer;
     color: transparent;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
+
 
 img {
     width: 100%;
@@ -129,14 +130,14 @@ img {
 }
 
 video {
-    z-index: 0;
+    z-index: 1;
     width: 100%;
     height: auto;
 }
 
 .item>img {
     position: fixed;
-    z-index: 25;
+    z-index: 1;
     height: auto;
     width: 40%;
     visibility: hidden;
@@ -204,6 +205,22 @@ video {
 @media only screen and (max-width: 600px) {
     .item>img {
         width: 80%;
+    }
+
+    .container {
+        top: 50%;
+        translate: 0 -50%;
+        position: fixed;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        word-wrap: break-word;
+        max-width: calc(100vw - 16px);
+        width: 100%;
+        -webkit-nbsp-mode: normal;
+        --font-scale: 1;
+        z-index: 25;
     }
 
 }
