@@ -8,7 +8,7 @@ html,
 body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
-    background-color: #dadada;
+    background-color: white;
     z-index: -1;
 }
 
@@ -98,7 +98,6 @@ a {
 
 /*image hover*/
 .container {
-    margin-top: 20px;
     width: auto;
     display: block;
     word-wrap: break-word;

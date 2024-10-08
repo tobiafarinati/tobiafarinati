@@ -171,27 +171,17 @@ a {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+.header{
+    border-bottom: 1px solid black;
+}
 
-    .container2 {
-        position: relative;
-        display: inline-grid;
-        grid: auto / 100%;
-        grid-column-gap: 5px;
-        grid-row-gap: 3px;
+    .container {
+        position: fixed;
+        top: 35px;
+        z-index: 20;
+        left: 50%;
+        translate: -50%;
         width: 100%;
-    }
-
-    .item2:first-child {
-        margin-top: 0;
-        padding-bottom: 5px;
-        width: 100%;
-        border-bottom: 1px solid black;
-    }
-
-    .item2 {
-        margin-top: 10px;
-        width: 100%;
-        border-bottom: none;
     }
 }
 
