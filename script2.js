@@ -30,13 +30,11 @@ var topPosition = ($(window).height() - $(this).find('img').height()) / 2;
 
 $('.item').mousemove(function (e) {
   $(this).find('img').addClass('visible');
-  $(this).find('img').css({
-    right: '8px',
-    top: (topPosition + ($(this).find('img').height() / 2)) + 'px'
-  });
+  // Optional: Center the image without adjusting the position dynamically
 }).mouseleave(function () {
   $(this).find('img').removeClass('visible');
 });
+
 
 // BACKGROUND IMAGES
 const images = [

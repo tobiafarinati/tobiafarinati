@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "MinionPro";
+    src: url('/font/MinionPro-Regular.otf') format('opentype');
+}
+
 html,
 body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     background-color: #dadada;
+    z-index: -1;
 }
 
 .background {
@@ -16,7 +22,7 @@ body {
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
     /* Set blend mode to multiply */
-    z-index: 0;
+    z-index: 1;
     /* Place background behind the content */
 }
 
@@ -32,48 +38,38 @@ body {
 
 /*BODY*/
 p {
-    font-family: Helvetica, sans-serif;
-    font-size: 0.95em;
-    line-height: 1.3;
+    font-family: 'MinionPro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.25;
     margin: 0;
-    color: black;
+    color: #000000;
+    -webkit-text-stroke-width: .6px;
 }
 
 a {
-    font-family: Helvetica, sans-serif;
-    text-decoration: none;
-    font-size: 0.95em;
-    line-height: 1.3;
+    font-family: 'MinionPro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.25;
     margin: 0;
-    color: black;
+    text-decoration: none;
+    color: #000000;
+    -webkit-text-stroke-width: .6px;
 }
 
 .header>a:hover {
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
 .header>p:hover {
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
-.container1 {
-    width: fit-content;
-    display: inline-grid;
-    grid: auto / 40px auto;
-    column-gap: 5px;
-    z-index: 20;
-}
+.container a:first-of-type::after {
+    content: "";
 
-.item1 {
-    width: 100%;
-    z-index: 20;
 }
-
-.container1:hover {
-    text-decoration: underline;
-    z-index: 20;
-}
-
 
 /*header e footer*/
 
@@ -85,20 +81,13 @@ a {
 }
 
 .header {
-    position: absolute;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center; /* Vertically align */
     z-index: 25;
 }
 
-.box {
-    position: relative;
-    width: calc(50% - 8px);
-    margin-top: 4px;
-    padding: 3px;
-    background-color: black;
-    z-index: 25;
-}
 
 .footer {
     position: absolute;
@@ -106,8 +95,63 @@ a {
     z-index: 20;
 }
 
-/*MODAL WINDOW*/
+/*image hover*/
+.container {
+    margin-top: 20px;
+    width: auto;
+    display: block;
+    word-wrap: break-word;
+    max-width: 100%;
+    width: 100%;
+    -webkit-nbsp-mode: normal;
+    --font-scale: 1;
+    z-index: 25;
+}
 
+.item {
+    z-index: 10;
+    margin: 0;
+    color: #000000;
+    border-bottom: 0px solid rgba(127, 127, 127, 0.2);
+    position: relative;
+}
+
+.item:hover {
+    z-index: 10;
+    cursor: pointer;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+video {
+    z-index: 0;
+    width: 100%;
+    height: auto;
+}
+
+.item>img {
+    position: fixed;
+    z-index: 25;
+    height: auto;
+    width: 40%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+}
+
+.item>img.visible {
+    transition: transform 0.2s ease-in-out;
+    visibility: visible;
+}
+
+/*MODAL WINDOW*/
 .modal {
     display: none;
     position: fixed;
@@ -134,111 +178,34 @@ a {
     transition-duration: 250ms;
 }
 
+.modal-content > a:hover {
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
 
 /* The Close Button */
 .close {
     width: fit-content;
+    color: #000000;
 }
 
 .close:hover,
 .close:focus {
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
     cursor: pointer;
 }
-
-/*image hover*/
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 16px);
-    height: calc(100svh - 16px);
-    width: auto;
-}
-
-.item {
-    margin: 0;
-    width: fit-content;
-}
-
-.item:hover {
-    cursor: pointer;
-    margin: 0;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-video {
-    z-index: 0;
-    width: 100%;
-    height: auto;
-}
-
-.item>img {
-    position: absolute;
-    z-index: 1;
-    height: auto;
-    width: calc(50% - 8px);
-    visibility: hidden;
-    transform: translate(0%, -50%);
-    pointer-events: none;
-    top: 50%;
-    right: 8px;
-}
-
-.item>img.visible {
-    transition: transform 0.2s ease-in-out;
-    visibility: visible;
-}
-
-.box1 {
-    background-color: none;
-    display: block;
-}
-
-/*SCRIPT*/
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* Puts canvas behind content */
-}
-
 
 /* Medium (tablet, 768px and down) */
-@media only screen and (max-width: 900px) {
-    .box {
-        position: relative;
-        width: calc(100% - 8px);
-        margin-top: 4px;
-        padding: 3px;
-        background-color: black;
-    }
-}
+@media only screen and (max-width: 900px) {}
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 450px) {
-    .box {
-        position: relative;
-        width: calc(100% - 8px);
-        margin-top: 4px;
-        padding: 3px;
-        background-color: black;
+@media only screen and (max-width: 600px) {
+    .item>img {
+        width: 80%;
     }
 
-    .box1 {
-        background-color: none;
-        display: none;
-    }
-
-    .container1:hover {
-        background-color: none;
-        z-index: 20;
-    }
 }
 
 /* Effetto hover per i dispositivi che supportano hover */

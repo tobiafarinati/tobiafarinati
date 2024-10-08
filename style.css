@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "MinionPro";
+    src: url('/font/MinionPro-Regular.otf') format('opentype');
+}
+
+
 html,
 body {
     padding: 0;
@@ -17,20 +23,22 @@ body {
 
 /*BODY*/
 p {
-    font-family: Helvetica, sans-serif;
-    font-size: 0.95em;
-    line-height: 1.3;
+    font-family: 'MinionPro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.25;
     margin: 0;
     color: #dadada;
+    -webkit-text-stroke-width: .6px;
 }
 
 a {
-    font-family: Helvetica, sans-serif;
-    text-decoration: none;
-    font-size: 0.95em;
-    line-height: 1.3;
+    font-family: 'MinionPro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.25;
     margin: 0;
+    text-decoration: none;
     color: #dadada;
+    -webkit-text-stroke-width: .6px;
 }
 
 #difference {
@@ -54,21 +62,16 @@ a {
 
 }
 
-header > a p {
-    color: #dadada;
-}
-
 .header>a:hover {
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
 .header>p:hover {
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
-.modal-content > p > a:hove{
-    text-decoration: underline;
-}
 
 .footer {
     position: absolute;
@@ -87,7 +90,8 @@ header > a p {
 }
 
 #prevButton:hover{
-text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
 #index {
@@ -101,7 +105,8 @@ text-decoration: underline;
 }
 
 #index:hover{
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
     }
 
 #nextButton {
@@ -112,7 +117,8 @@ text-decoration: underline;
 }
 
 #nextButton:hover{
-    text-decoration: underline;
+    color: transparent;
+    text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
     }
 
 .slides-container {
@@ -176,15 +182,31 @@ img {
 }
 
   /* The Close Button */  
-.close {
+  .close {
     width: fit-content;
 }
 
-  .close:hover,
-  .close:focus {
-    text-decoration: underline;
+.modal-content > p {
+    color: black;
+}
+
+.modal-content > a {
+    color: black;
+}
+
+.modal-content > a:hover {
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
     cursor: pointer;
-  }
+}
+
+
+.close:hover,
+.close:focus {
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
 
 .box {
     position: relative;
