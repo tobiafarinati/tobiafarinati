@@ -24,22 +24,23 @@ body {
 /*BODY*/
 p {
     font-family: 'MinionPro', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     margin: 0;
     color: #000000;
-    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-width: .8px;
 }
 
 a {
     font-family: 'MinionPro', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     margin: 0;
     text-decoration: none;
     color: #000000;
-    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-width: .8px;
 }
+
 
 .header>a:hover {
     color: transparent;
