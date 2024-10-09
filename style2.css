@@ -40,21 +40,31 @@ body {
 /*BODY*/
 p {
     font-family: 'MinionPro', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     margin: 0;
     color: #000000;
-    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-width: .8px;
 }
 
 a {
     font-family: 'MinionPro', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.25;
     margin: 0;
     text-decoration: none;
     color: #000000;
-    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-width: .8px;
+}
+
+a:hover{
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .header>a:hover {
@@ -101,6 +111,7 @@ a {
     width: auto;
     display: block;
     word-wrap: break-word;
+    text-align: center;
     max-width: calc(100vw - 16px);
     width: 100%;
     -webkit-nbsp-mode: normal;
@@ -111,18 +122,34 @@ a {
 .item {
     z-index: 10;
     margin: 0;
-    color: #000000;
-    border-bottom: 0px solid rgba(127, 127, 127, 0.2);
     position: relative;
 }
 
 .item:hover {
     z-index: 1;
-    cursor: pointer;
-    color: transparent;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
+.container>a {
+    z-index: 10;
+}
+
+.item>img {
+    position: fixed;
+    z-index: -1; /* Posiziona l'immagine sotto tutto */
+    height: auto;
+    width: 40%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+}
+
+.item:hover>img.visible {
+    visibility: visible;
+    z-index: -1; /* L'immagine rimane sotto anche quando visibile */
+    transition: transform 0.2s ease-in-out;
+}
 
 img {
     width: 100%;
@@ -133,23 +160,6 @@ video {
     z-index: 1;
     width: 100%;
     height: auto;
-}
-
-.item>img {
-    position: fixed;
-    z-index: 1;
-    height: auto;
-    width: 40%;
-    visibility: hidden;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    top: 50%;
-    left: 50%;
-}
-
-.item>img.visible {
-    transition: transform 0.2s ease-in-out;
-    visibility: visible;
 }
 
 /*MODAL WINDOW*/
@@ -199,12 +209,19 @@ video {
 }
 
 /* Medium (tablet, 768px and down) */
-@media only screen and (max-width: 900px) {}
+@media only screen and (max-width: 900px) {
+
+    .item>img {
+        width: 80%;
+        max-width: 45vw;
+    }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .item>img {
         width: 80%;
+        max-width: 100%;
     }
 }
 

@@ -72,7 +72,6 @@ a {
     text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
-
 .footer {
     position: absolute;
     bottom: 8px;
@@ -81,6 +80,7 @@ a {
     will-change: mix-blend-mode;
     background: rgba(0, 0, 0, 0);
 }
+
 
 #prevButton {
     position: absolute;
