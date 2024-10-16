@@ -8,6 +8,7 @@ html,
 body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    cursor: -webkit-grabbing; cursor: grabbing;
 }
 
 
@@ -58,12 +59,12 @@ a {
     top: 8px;
 }
 
-a:hover {
+header > a:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
-p:hover {
+header > p:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
@@ -157,29 +158,42 @@ img {
 /*MODAL WINDOW*/
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 29; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: -2;
     left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-  }
-  
-  /* Modal Content */
-.modal-content {
-    z-index: 30;
+    bottom: 24px;
+    width: 100%;
+    height: auto;
+}
+
+/* Modal Content */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 24px;
+    width: 100%;
+    height: auto;
     background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    z-index: 20;
     margin: auto;
-    padding: 16px;
-    border: 1px solid black;
-    width: 78%;
-    max-height: 70vh;
-    max-height: 70svh;
+    padding: 8px;
+    width: 100%;
+    height: auto;
     overflow: auto;
-    transition-timing-function: ease-in;
-    transition-duration: 250ms;
+}
+
+.modal-content>a:hover {
+    color: transparent;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 }
 
   /* The Close Button */  
@@ -231,9 +245,4 @@ img {
 
 /* Effetto hover per i dispositivi che supportano hover */
 @media (hover: hover) and (pointer: fine) {
-    .modal-content:hover {
-        transform: scale(1.02);
-        transition-timing-function: ease-in;
-        transition-duration: 250ms;
-    }
 }

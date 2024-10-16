@@ -10,6 +10,8 @@ body {
     -webkit-font-smoothing: antialiased;
     background-color: white;
     z-index: -1;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
 }
 
 .background {
@@ -57,7 +59,7 @@ a {
     -webkit-text-stroke-width: .8px;
 }
 
-a:hover{
+a:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
@@ -67,12 +69,12 @@ span {
     font-size: 1.2rem;
 }
 
-.header>a:hover {
+header > a:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
-.header>p:hover {
+header > p:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
@@ -91,14 +93,12 @@ span {
     background: rgba(0, 0, 0, 0);
 }
 
-.header {
-    position: relative;
-    display: flex;
-    justify-content: space-between; /* Distribute space between elements */
-    align-items: center; /* Vertically align */
-    z-index: 25;
+#myBtn{
+    position: absolute;
+    z-index: 1;
+    right: 8px;
+    top: 8px;
 }
-
 
 .footer {
     position: absolute;
@@ -134,23 +134,25 @@ span {
 }
 
 .item>img {
-        position: fixed;
-        z-index: -1; /* Posiziona l'immagine sotto tutto */
-        width: auto;
-        height: auto;
-        max-width: 60%;
-        max-height: 70%;
-        visibility: hidden;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        top: 50%;
-        left: 50%;
-        object-fit: contain;    
+    position: fixed;
+    z-index: -1;
+    /* Posiziona l'immagine sotto tutto */
+    width: auto;
+    height: auto;
+    max-width: 60%;
+    max-height: 70%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
 }
 
 .item:hover>img.visible {
     visibility: visible;
-    z-index: -1; /* L'immagine rimane sotto anche quando visibile */
+    z-index: -1;
+    /* L'immagine rimane sotto anche quando visibile */
     transition: transform 0.2s ease-in-out;
 }
 
@@ -169,30 +171,24 @@ video {
 .modal {
     display: none;
     position: fixed;
-    z-index: 29;
-    padding-top: 100px;
+    z-index: 20;
     left: 0;
-    top: 0;
+    bottom: 24px;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 /* Modal Content */
 .modal-content {
-    z-index: 30;
-    background-color: white;
+    z-index: 20;
     margin: auto;
-    padding: 16px;
-    border: 1px solid black;
-    width: 78%;
-    max-height: 70vh;
-    max-height: 70svh;
+    padding: 8px;
+    width: 100%;
+    height: auto;
     overflow: auto;
-    transition-timing-function: ease-in;
-    transition-duration: 250ms;
 }
 
-.modal-content > a:hover {
+.modal-content>a:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
     cursor: pointer;
@@ -215,23 +211,18 @@ video {
 @media only screen and (max-width: 900px) {
     .item>img {
         max-width: 70%;
-        max-height: 70%;  
-}
+        max-height: 70%;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .item>img {
         max-width: 90%;
-        max-height: 70%;  
-}
+        max-height: 70%;
+    }
 }
 
 /* Effetto hover per i dispositivi che supportano hover */
 @media (hover: hover) and (pointer: fine) {
-    .modal-content:hover {
-        transform: scale(1.02);
-        transition-timing-function: ease-in;
-        transition-duration: 250ms;
-    }
 }
