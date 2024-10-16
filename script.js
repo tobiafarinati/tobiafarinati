@@ -1,7 +1,7 @@
 //carousel animation
 
-var slideDelay = 2;
-var slideDuration = 2;
+var slideDelay = 1.5;
+var slideDuration = 1.5;
 
 var slides = document.querySelectorAll(".slide");
 var prevButton = document.querySelector("#prevButton");

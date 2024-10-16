@@ -42,32 +42,28 @@ a {
 }
 
 #difference {
-    z-index: 20;
+    z-index: 1;
     mix-blend-mode: difference;
     will-change: mix-blend-mode;
     background: rgba(0, 0, 0, 0);
 }
 
 #myBtn{
-    z-index: 20;
+    position: absolute;
+    z-index: 1;
     mix-blend-mode: difference;
     will-change: mix-blend-mode;
     background: rgba(0, 0, 0, 0);
+    right: 8px;
+    top: 8px;
 }
 
-.header {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.header>a:hover {
+a:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
 
-.header>p:hover {
+p:hover {
     color: transparent;
     text-shadow: 0 0 3px rgba(218, 218, 218, 0.7);
 }
@@ -77,10 +73,7 @@ a {
     bottom: 8px;
     z-index: 20;
     mix-blend-mode: difference;
-    will-change: mix-blend-mode;
-    background: rgba(0, 0, 0, 0);
 }
-
 
 #prevButton {
     position: absolute;
@@ -145,6 +138,14 @@ a {
     -webkit-transform: translateX(0);
     transform: translate(0);
 
+}
+
+.desktop {
+    display: block;
+}
+
+.mobile {
+    display: none;
 }
 
 img {
@@ -214,7 +215,13 @@ img {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+    .desktop {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
