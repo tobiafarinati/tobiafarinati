@@ -103,7 +103,7 @@ header > p:hover {
 .footer {
     position: absolute;
     bottom: 8px;
-    z-index: 20;
+    z-index: 35;
 }
 
 /*image hover*/
@@ -171,11 +171,13 @@ video {
 .modal {
     display: none;
     position: fixed;
-    z-index: 20;
+    z-index: 30;
     left: 0;
-    bottom: 24px;
+    bottom: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    height: 100svh;
+    background-color: white;
 }
 
 /* Modal Content */
