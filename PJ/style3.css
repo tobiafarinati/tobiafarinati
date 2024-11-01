@@ -1,7 +1,8 @@
 @font-face {
     font-family: "MinionPro";
-    src: url('/font/MinionPro-Regular.woff') format('woff');
+    src: url('../01_font/MinionPro-Regular.woff') format('woff');
 }
+
 
 html,
 body {
@@ -36,7 +37,7 @@ p {
     line-height: 1.25;
     margin: 0;
     color: #000000;
-    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-width: .6px;
 }
 
 a {
@@ -46,7 +47,7 @@ a {
     margin: 0;
     text-decoration: none;
     color: #000000;
-    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-width: .6px;
 }
 
 .name {

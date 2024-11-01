@@ -1,6 +1,6 @@
 @font-face {
     font-family: "MinionPro";
-    src: url('/font/MinionPro-Regular.woff') format('woff');
+    src: url('/01_font/MinionPro-Regular.woff') format('woff');
 }
 
 
@@ -46,7 +46,7 @@ p {
     line-height: 1.25;
     margin: 0;
     color: #000000;
-    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-width: .6px;
 }
 
 a {
@@ -56,7 +56,7 @@ a {
     margin: 0;
     text-decoration: none;
     color: #000000;
-    -webkit-text-stroke-width: .8px;
+    -webkit-text-stroke-width: .6px;
 }
 
 a:hover {
@@ -101,7 +101,7 @@ header > p:hover {
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
     bottom: 8px;
     z-index: 35;
 }
@@ -235,6 +235,7 @@ video {
         height: 100svh;
         background-color: white;
     }
+
 }
 
 /* Effetto hover per i dispositivi che supportano hover 
